@@ -7,5 +7,5 @@
 //* Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 
 include_once __DIR__ . '/partials/head.php';
-
+include_once __DIR__ . '/partials/main.php';
 include_once __DIR__ . '/partials/footer.php';
