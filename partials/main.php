@@ -10,8 +10,11 @@ $first_item = new Shop("Collare", "https://images.unsplash.com/photo-1546687813-
     <div class="container">
         <div class="row">
             <div class="card" style="width: 18rem;">
-                <img src="<?php echo $first_item->image ?>" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div>
+                    <img src="<?php echo $first_item->image ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo $first_item->genre_image ?>" alt="">
+                </div>
+                <div class=" card-body">
                     <h5 class="card-title"><?php echo $first_item->title ?></h5>
                     <p class="card-text">Price: <?php echo $first_item->price ?></p>
                     <p class="card-text">Type: <?php echo $first_item->type ?></p>
