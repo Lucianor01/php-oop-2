@@ -18,9 +18,4 @@ class Shop
         $this->type = $_type;
         $this->genre = $_genre;
     }
-
-    public function get_shop_details()
-    {
-        return " Shop: $this->title, Price: $this->price";
-    }
 }
