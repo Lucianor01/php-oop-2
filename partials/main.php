@@ -62,8 +62,13 @@ $arrayProdotti = [
                                 <?= $elem->getClassName() ?>
 
                                 <?php if ($elem->getClassName() === 'Food') : ?>
-                                    <?php $elem->setCalories(300) ?>
-                                    <?= "Le calorie sono: " . $elem->getCalories() ?>
+                                    <?php try {
+                                        $elem->setCalories(301);
+                                        echo "Le calorie sono: " . $elem->getCalories();
+                                    } catch (Exception $e) {
+                                        // var_dump($e);
+                                        echo  $e->getMessage();
+                                    } ?>
                                 <?php endif; ?>
                             </div>
                         </div>

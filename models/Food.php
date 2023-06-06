@@ -19,7 +19,16 @@ class Food extends Product
 
     public function setCalories($_calories)
     {
-        return $this->calories = $_calories;
+
+        if ($_calories < 300) {
+            throw new Exception("Hai preso il prodotto sbagliato perchè le calorie sono meno di 300");
+        } elseif ($_calories > 300) {
+            throw new Exception("Hai preso il prodotto sbagliato perchè le calorie sono più di 300");
+        } else {
+            return $this->calories = $_calories;
+        }
+
+        // return $this->calories = $_calories;
     }
 
     public function getClassName()
