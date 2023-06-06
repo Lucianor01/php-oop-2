@@ -1,15 +1,19 @@
 <?php
 
 require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/../traits/expiration.php';
 
 class Food extends Product
 {
+    use Expiration;
 
     protected $calories;
 
-    public function __construct($_name, $_price, $_image, Category $_category, $_is_available = true, $_quantity = 10)
+    public function __construct($_name, $_price, $_image, Category $_category, $_is_available, $_quantity, $_expiration)
     {
         parent::__construct($_name, $_price, $_image, $_category, $_is_available, $_quantity);
+
+        $this->expiration = $_expiration;
     }
 
     public function getCalories()
